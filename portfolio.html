@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Réalisations - L'Atelier Numérique</title>
+    <meta name="description" content="Découvrez nos réalisations en matière de développement d'applications mobiles, sites web et logiciels sur mesure pour différents clients et secteurs.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- En-tête -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.svg" alt="Logo L'Atelier Numérique">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html" class="active">Réalisations</a></li>
+                    <li><a href="process.html">Processus</a></li>
+                    <li><a href="contact.html" class="btn btn-primary">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section Hero Portfolio -->
+    <section class="page-hero bg-light">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1>Nos réalisations</h1>
+                <p>Découvrez quelques-uns de nos projets et l'impact qu'ils ont eu pour nos clients</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtres Portfolio -->
+    <section class="portfolio-filters section-padding-sm">
+        <div class="container">
+            <div class="filters-wrapper">
+                <p class="filter-label">Filtrer par catégorie :</p>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Tous</button>
+                    <button class="filter-btn" data-filter="mobile">Applications mobiles</button>
+                    <button class="filter-btn" data-filter="web">Sites web</button>
+                    <button class="filter-btn" data-filter="software">Logiciels métier</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets Portfolio -->
+    <section class="portfolio-projects section-padding-top">
+        <div class="container">
+            <div class="portfolio-grid">
+                <!-- Projet PaperClip2 -->
+                <div id="paperclip2" class="portfolio-item mobile">
+                    <div class="portfolio-content">
+                        <div class="portfolio-gallery">
+                            <div class="portfolio-main-image">
+                                <img src="img/projects/paperclip2.jpg" alt="PaperClip2 - Application mobile de jeu">
+                            </div>
+                            <div class="portfolio-thumbnails">
+                                <img src="img/projects/paperclip2-1.jpg" alt="PaperClip2 - Écran d'accueil">
+                                <img src="img/projects/paperclip2-2.jpg" alt="PaperClip2 - Interface de jeu">
+                                <img src="img/projects/paperclip2-3.jpg" alt="PaperClip2 - Menus d'amélioration">
+                            </div>
+                        </div>
+                        <div class="portfolio-details">
+                            <h2>PaperClip2</h2>
+                            <p class="portfolio-category">Application mobile - Jeu</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">Flutter</span>
+                                <span class="tag">Java</span>
+                                <span class="tag">SQLite</span>
+                                <span class="tag">Google Play</span>
+                            </div>
+                            <div class="portfolio-description">
+                                <h3>Le projet</h3>
+                                <p>PaperClip2 est un jeu d'optimisation inspiré par le thought experiment de Nick Bostrom sur l'alignement de l'intelligence artificielle. Le joueur doit maximiser la production de trombones tout en gérant un système complexe de ressources, recherche et automatisation.</p>
+                                
+                                <h3>Défis et solutions</h3>
+                                <p>Le principal défi était de créer un système de progression non-linéaire avec des interactions complexes entre différents mécanismes de jeu. Nous avons mis en place une architecture modulaire qui permet au jeu d'évoluer et de se complexifier au fil du temps, avec des systèmes interconnectés qui créent une expérience émergente.</p>
+                                
+                                <h3>Technologies utilisées</h3>
+                                <ul>
+                                    <li>Framework Flutter pour une interface réactive et fluide</li>
+                                    <li>Architecture Clean pour une maintenance facilitée</li>
+                                    <li>SQLite pour la persistance des données</li>
+                                    <li>Système d'équilibrage dynamique pour une progression optimale</li>
+                                </ul>
+                                
+                                <h3>Résultats</h3>
+                                <p>PaperClip2 a connu un succès d'estime auprès des joueurs intéressés par les jeux de réflexion et d'optimisation, avec une note moyenne de 4.7/5 sur les stores et une communauté active de joueurs partageant leurs stratégies.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet CryptoTracker Pro -->
+                <div id="cryptotracker" class="portfolio-item mobile software">
+                    <div class="portfolio-content">
+                        <div class="portfolio-gallery">
+                            <div class="portfolio-main-image">
+                                <img src="img/projects/crypto-app.jpg" alt="CryptoTracker Pro - Application de suivi crypto">
+                            </div>
+                            <div class="portfolio-thumbnails">
+                                <img src="img/projects/crypto-app-1.jpg" alt="CryptoTracker Pro - Dashboard">
+                                <img src="img/projects/crypto-app-2.jpg" alt="CryptoTracker Pro - Détail des transactions">
+                                <img src="img/projects/crypto-app-3.jpg" alt="CryptoTracker Pro - Graphiques d'analyse">
+                            </div>
+                        </div>
+                        <div class="portfolio-details">
+                            <h2>CryptoTracker Pro</h2>
+                            <p class="portfolio-category">Application mobile - Finance</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">Flutter</span>
+                                <span class="tag">Hive DB</span>
+                                <span class="tag">Provider</span>
+                                <span class="tag">API CoinGecko</span>
+                                <span class="tag">API Binance</span>
+                            </div>
+                            <div class="portfolio-description">
+                                <h3>Le projet</h3>
+                                <p>CryptoTracker Pro est une application complète de suivi de portefeuille de cryptomonnaies qui permet aux utilisateurs d'importer leurs transactions, de suivre l'évolution de leurs investissements en temps réel et d'analyser leurs performances.</p>
+                                
+                                <h3>Défis et solutions</h3>
+                                <p>Les principaux défis étaient la gestion de données complexes et la synchronisation avec plusieurs API externes, tout en garantissant une expérience fluide même hors connexion. Nous avons mis en place une architecture Clean avec un système de cache robuste utilisant Hive, permettant une utilisation optimale même sans internet.</p>
+                                
+                                <h3>Technologies utilisées</h3>
+                                <ul>
+                                    <li>Flutter pour une interface utilisateur réactive et multi-plateforme</li>
+                                    <li>Architecture Clean pour une séparation claire des responsabilités</li>
+                                    <li>Provider pour la gestion d'état</li>
+                                    <li>Hive pour le stockage local et le cache</li>
+                                    <li>Intégration des API CoinGecko et Binance</li>
+                                </ul>
+                                
+                                <h3>Résultats</h3>
+                                <p>L'application a permis aux utilisateurs de gérer efficacement leurs investissements en cryptomonnaies, avec des fonctionnalités avancées comme l'import de transactions depuis CSV/Excel, le support d'API d'échanges et une interface intuitive. Les utilisateurs apprécient particulièrement la possibilité d'utiliser l'application hors ligne et la sécurité offerte par l'authentification biométrique.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet Bibliothèque Municipale -->
+                <div class="portfolio-item software">
+                    <div class="portfolio-content">
+                        <div class="portfolio-gallery">
+                            <div class="portfolio-main-image">
+                                <img src="img/projects/library-software.jpg" alt="Logiciel de gestion de bibliothèque">
+                            </div>
+                            <div class="portfolio-thumbnails">
+                                <img src="img/projects/library-1.jpg" alt="Interface de gestion des prêts">
+                                <img src="img/projects/library-2.jpg" alt="Catalogue des ouvrages">
+                                <img src="img/projects/library-3.jpg" alt="Statistiques de fréquentation">
+                            </div>
+                        </div>
+                        <div class="portfolio-details">
+                            <h2>Système de gestion de bibliothèque</h2>
+                            <p class="portfolio-category">Logiciel métier</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">Java</span>
+                                <span class="tag">JavaFX</span>
+                                <span class="tag">SQL</span>
+                                <span class="tag">Architecture MVC</span>
+                            </div>
+                            <div class="portfolio-description">
+                                <h3>Le projet</h3>
+                                <p>Développement d'un logiciel de gestion complet pour une bibliothèque municipale, permettant le suivi des emprunts, la gestion du catalogue, les inscriptions des usagers et l'analyse statistique de la fréquentation.</p>
+                                
+                                <h3>Défis et solutions</h3>
+                                <p>Le principal défi était de remplacer un système obsolète tout en migrant les données existantes et en formant le personnel à la nouvelle interface. Nous avons mis en place une approche progressive avec des sessions de formation personnalisées et un système d'aide contextuelle intégré.</p>
+                                
+                                <h3>Technologies utilisées</h3>
+                                <ul>
+                                    <li>Java et JavaFX pour une interface desktop responsive</li>
+                                    <li>Base de données SQL pour le stockage des données</li>
+                                    <li>Architecture MVC pour une maintenance facilitée</li>
+                                    <li>Système de rapports et statistiques personnalisables</li>
+                                </ul>
+                                
+                                <h3>Résultats</h3>
+                                <p>Le nouveau système a permis d'automatiser de nombreuses tâches administratives, réduisant le temps consacré à la gestion de 40%. Les usagers bénéficient maintenant d'un système de réservation en ligne et de notifications automatiques. Le personnel apprécie particulièrement la simplicité d'utilisation et les fonctionnalités d'analyse qui leur permettent de mieux comprendre les habitudes de lecture de leurs usagers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet Site E-commerce -->
+                <div class="portfolio-item web">
+                    <div class="portfolio-content">
+                        <div class="portfolio-gallery">
+                            <div class="portfolio-main-image">
+                                <img src="img/projects/ecommerce.jpg" alt="Site e-commerce artisanal">
+                            </div>
+                            <div class="portfolio-thumbnails">
+                                <img src="img/projects/ecommerce-1.jpg" alt="Page d'accueil">
+                                <img src="img/projects/ecommerce-2.jpg" alt="Catalogue produits">
+                                <img src="img/projects/ecommerce-3.jpg" alt="Panier d'achat">
+                            </div>
+                        </div>
+                        <div class="portfolio-details">
+                            <h2>Boutique en ligne d'artisanat local</h2>
+                            <p class="portfolio-category">Site web - E-commerce</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">HTML/CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">PHP</span>
+                                <span class="tag">Responsive Design</span>
+                            </div>
+                            <div class="portfolio-description">
+                                <h3>Le projet</h3>
+                                <p>Création d'une boutique en ligne pour un collectif d'artisans locaux, leur permettant de vendre leurs créations directement aux consommateurs sans passer par des intermédiaires.</p>
+                                
+                                <h3>Défis et solutions</h3>
+                                <p>Le principal défi était de créer une expérience utilisateur élégante qui mette en valeur le caractère artisanal des produits, tout en offrant une gestion simplifiée pour des artisans peu familiers avec les outils numériques. Nous avons développé une interface d'administration intuitive avec des tutoriels intégrés.</p>
+                                
+                                <h3>Technologies utilisées</h3>
+                                <ul>
+                                    <li>HTML/CSS et JavaScript pour le frontend</li>
+                                    <li>PHP et MySQL pour le backend</li>
+                                    <li>Design responsive adapté à tous les appareils</li>
+                                    <li>Optimisation SEO pour une bonne visibilité</li>
+                                </ul>
+                                
+                                <h3>Résultats</h3>
+                                <p>Le site a permis aux artisans d'augmenter leur chiffre d'affaires de 35% dès la première année, en atteignant une clientèle plus large. La solution est facilement maintenue par les artisans eux-mêmes, qui peuvent ajouter leurs nouveaux produits sans assistance technique.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section CTA -->
+    <section class="cta-section section-padding">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Vous avez un projet similaire ?</h2>
+                <p>Contactez-nous pour discuter de vos besoins et découvrir comment nous pouvons vous aider à concrétiser votre vision.</p>
+                <a href="contact.html" class="btn btn-primary">Discuter de votre projet</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <img src="img/logo-white.svg" alt="Logo L'Atelier Numérique">
+                    </div>
+                    <p>Des solutions digitales sur mesure, accessibles et innovantes pour les entrepreneurs et petites structures.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Réalisations</a></li>
+                        <li><a href="process.html">Processus</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h4>Nos services</h4>
+                    <ul>
+                        <li><a href="services.html#mobile">Applications mobiles</a></li>
+                        <li><a href="services.html#web">Sites web</a></li>
+                        <li><a href="services.html#software">Logiciels métier</a></li>
+                        <li><a href="services.html#consulting">Conseil & assistance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> contact@lateliernumerique.fr</li>
+                        <li><i class="fas fa-phone"></i> 06 XX XX XX XX</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Lyon, France</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 L'Atelier Numérique. Tous droits réservés.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Politique de confidentialité</a>
+                    <a href="terms.html">Conditions d'utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
