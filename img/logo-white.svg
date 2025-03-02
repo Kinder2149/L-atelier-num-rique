@@ -1,6 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
-  <rect width="50" height="50" x="5" y="5" rx="5" fill="#2563EB"/>
-  <text x="65" y="30" font-family="Arial" font-size="18" font-weight="bold" fill="white">L'Atelier</text>
-  <text x="65" y="48" font-family="Arial" font-size="18" font-weight="bold" fill="white">Numérique</text>
-  <path d="M20 15 L25 25 L35 15 L40 25 L30 35 L20 25 Z" fill="white" stroke="white" stroke-width="1"/>
-</svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="200" height="60">
+            <text x="10" y="40" font-family="Arial" font-size="20">
+              logo-white
+            </text>
+          </svg>
+        
