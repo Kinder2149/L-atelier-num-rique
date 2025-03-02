@@ -1,0 +1,14 @@
+{
+    "name": "l-atelier-numerique",
+    "version": "1.0.0",
+    "description": "Site vitrine pour L'Atelier Numérique",
+    "main": "index.html",
+    "scripts": {
+      "generate-images": "node generate-images.js",
+      "predeploy": "npm run generate-images",
+      "deploy": "gh-pages -d ."
+    },
+    "devDependencies": {
+      "gh-pages": "^6.0.0"
+    }
+  }
