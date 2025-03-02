@@ -9,8 +9,15 @@ const IMAGE_PATHS = [
   // Logos
   'img/logo.svg',
   'img/logo-white.svg',
+
+  
   'img/hero-illustration.svg',
   'img/hero-pattern.svg',
+  'img/hero-illustration.svg',
+  'img/hero-pattern.svg',
+  'img/contact/contact-hero.jpg',
+  'img/pattern-background.svg',
+  'img/placeholder-image.jpg',
 
   // Projets
   'img/projects/paperclip2.jpg',
