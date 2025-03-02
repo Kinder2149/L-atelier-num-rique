@@ -4,43 +4,60 @@ const path = require('path');
 // Chemins absolus pour être sûr de trouver les fichiers
 const projectRoot = path.resolve(__dirname);
 
-// Fonction pour extraire les chemins d'images de tous les HTML
-function extractImagePaths() {
-  const htmlFiles = [
-    'index.html', 
-    'about.html', 
-    'services.html', 
-    'portfolio.html', 
-    'process.html', 
-    'contact.html'
-  ];
+// Liste exhaustive de tous les chemins d'images à générer
+const IMAGE_PATHS = [
+  // Logos
+  'img/logo.svg',
+  'img/logo-white.svg',
+  'img/hero-illustration.svg',
+  'img/hero-pattern.svg',
 
-  const imagePaths = new Set();
+  // Projets
+  'img/projects/paperclip2.jpg',
+  'img/projects/paperclip2-1.jpg',
+  'img/projects/paperclip2-2.jpg',
+  'img/projects/paperclip2-3.jpg',
+  'img/projects/crypto-app.jpg',
+  'img/projects/crypto-app-1.jpg',
+  'img/projects/crypto-app-2.jpg',
+  'img/projects/crypto-app-3.jpg',
+  'img/projects/library-software.jpg',
+  'img/projects/library-1.jpg',
+  'img/projects/library-2.jpg',
+  'img/projects/library-3.jpg',
+  'img/projects/ecommerce.jpg',
+  'img/projects/ecommerce-1.jpg',
+  'img/projects/ecommerce-2.jpg',
+  'img/projects/ecommerce-3.jpg',
 
-  htmlFiles.forEach(file => {
-    const fullPath = path.join(projectRoot, file);
-    
-    try {
-      const content = fs.readFileSync(fullPath, 'utf8');
-      const imageMatches = content.match(/src="([^"]+)"/g) || [];
-      
-      imageMatches.forEach(match => {
-        const imagePath = match.replace(/src="/, '').replace(/"$/, '');
-        if (imagePath.endsWith('.jpg') || imagePath.endsWith('.png') || imagePath.endsWith('.svg')) {
-          imagePaths.add(path.join(projectRoot, imagePath));
-        }
-      });
-    } catch (error) {
-      console.error(`Erreur lors de la lecture de ${file}: ${error.message}`);
-    }
-  });
+  // Équipe
+  'img/team/samuel.jpg',
+  'img/team/valentin.jpg',
+  'img/team.jpg',
 
-  return Array.from(imagePaths);
-}
+  // Témoignages
+  'img/testimonials/client1.jpg',
+  'img/testimonials/client2.jpg',
+  'img/testimonials/client3.jpg',
+  'img/testimonials/client4.jpg',
+
+  // À propos
+  'img/about/history.jpg',
+  'img/about/approach.jpg',
+
+  // Services
+  'img/services/mobile-app.jpg',
+  'img/services/web-dev.jpg',
+  'img/services/software.jpg',
+  'img/services/consulting.jpg',
+
+  // Processus
+  'img/process/intro.jpg'
+];
 
 // Fonction pour créer les répertoires si nécessaire
-function createDirectories(imagePaths) {
-  const directories = new Set(imagePaths.map(path.dirname));
+function createDirectories() {
+  const directories = new Set(IMAGE_PATHS.map(imagePath => path.join(projectRoot, path.dirname(imagePath))));
   
   directories.forEach(dir => {
     if (!fs.existsSync(dir)) {
@@ -62,44 +79,54 @@ function generatePlaceholderImage(imagePath, width = 800, height = 600) {
     </svg>
   `;
 
-  // Assurer que le répertoire existe
-  const directory = path.dirname(imagePath);
-  if (!fs.existsSync(directory)) {
-    fs.mkdirSync(directory, { recursive: true });
+  // Génération de placeholder SVG
+  if (imagePath.endsWith('.svg')) {
+    const svgLogoContent = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="200" height="60">
+        <rect width="100%" height="100%" fill="#f0f0f0"/>
+        <text x="50%" y="50%" font-family="Arial" font-size="16" fill="#888" 
+          text-anchor="middle" alignment-baseline="middle">
+          ${path.basename(imagePath, '.svg')}
+        </text>
+      </svg>
+    `;
+    fs.writeFileSync(imagePath, svgLogoContent);
+  } else {
+    // Ajuster la taille selon le type d'image
+    if (imagePath.includes('team/') || imagePath.includes('testimonials/')) {
+      width = 400;
+      height = 500;
+    } else if (imagePath.includes('services/') || imagePath.includes('about/')) {
+      width = 600;
+      height = 400;
+    }
+
+    const finalSvgContent = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">
+        <rect width="100%" height="100%" fill="#f0f0f0"/>
+        <text x="50%" y="50%" font-family="Arial" font-size="20" fill="#888" 
+          text-anchor="middle" alignment-baseline="middle">
+          ${path.basename(imagePath)}
+        </text>
+      </svg>
+    `;
+
+    fs.writeFileSync(imagePath, finalSvgContent);
   }
 
-  fs.writeFileSync(imagePath, svgContent);
   console.log(`Image générée : ${imagePath}`);
 }
 
 // Fonction principale
 function generateAllImages() {
   try {
-    const imagePaths = extractImagePaths();
+    // Créer les répertoires
+    createDirectories();
     
-    createDirectories(imagePaths);
-    
-    imagePaths.forEach(imagePath => {
-      // Génération de tailles différentes selon le type d'image
-      if (imagePath.includes('projects/')) {
-        generatePlaceholderImage(imagePath, 800, 600);  // Grande taille pour projets
-      } else if (imagePath.includes('team/') || imagePath.includes('testimonials/')) {
-        generatePlaceholderImage(imagePath, 400, 500);  // Taille de portrait
-      } else if (imagePath.includes('services/') || imagePath.includes('about/')) {
-        generatePlaceholderImage(imagePath, 600, 400);  // Taille moyenne
-      } else if (imagePath.endsWith('.svg')) {
-        // Pour les SVG, générer un SVG minimal
-        const svgContent = `
-          <svg xmlns="http://www.w3.org/2000/svg" width="200" height="60">
-            <text x="10" y="40" font-family="Arial" font-size="20">
-              ${path.basename(imagePath, '.svg')}
-            </text>
-          </svg>
-        `;
-        fs.writeFileSync(imagePath, svgContent);
-      } else {
-        generatePlaceholderImage(imagePath);  // Taille par défaut
-      }
+    // Générer chaque image
+    IMAGE_PATHS.forEach(relativePath => {
+      const fullPath = path.join(projectRoot, relativePath);
+      generatePlaceholderImage(fullPath);
     });
 
     console.log('Toutes les images ont été générées avec succès !');
