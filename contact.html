@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - L'Atelier Numérique</title>
+    <meta name="description" content="Contactez L'Atelier Numérique pour discuter de votre projet digital et obtenir un devis personnalisé pour le développement de votre application mobile, site web ou logiciel.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- En-tête -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.svg" alt="Logo L'Atelier Numérique">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Réalisations</a></li>
+                    <li><a href="process.html">Processus</a></li>
+                    <li><a href="contact.html" class="active btn btn-primary">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section Hero Contact -->
+    <section class="page-hero bg-light">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1>Contactez-nous</h1>
+                <p>Parlons de votre projet digital et voyons comment nous pouvons vous aider</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Informations de Contact -->
+    <section class="contact-info-section section-padding">
+        <div class="container">
+            <div class="contact-info-grid">
+                <div class="contact-info-content">
+                    <h2>Comment pouvons-nous vous aider ?</h2>
+                    <p>Que vous ayez un projet précis en tête ou simplement des questions sur nos services, n'hésitez pas à nous contacter. Nous vous répondrons dans les plus brefs délais (généralement sous 24h).</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-method-details">
+                                <h3>Email</h3>
+                                <p>contact@lateliernumerique.fr</p>
+                                <p class="contact-note">Pour toute demande d'information ou de devis</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-method-details">
+                                <h3>Téléphone</h3>
+                                <p>06 XX XX XX XX</p>
+                                <p class="contact-note">Du lundi au vendredi, de 9h à 18h</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-method-details">
+                                <h3>Localisation</h3>
+                                <p>Lyon, France</p>
+                                <p class="contact-note">Nous intervenons principalement en région lyonnaise, mais aussi à distance</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-socials">
+                        <h3>Suivez-nous</h3>
+                        <div class="social-links horizontal">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-info-map">
+                    <div class="map-container">
+                        <!-- Intégrer ici une carte Google Maps ou OpenStreetMap -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44580.63073649971!2d4.809050973975878!3d45.76260078865916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea516ae88797%3A0x408ab2ae4bb21f0!2sLyon!5e0!3m2!1sfr!2sfr!4v1620154842962!5m2!1sfr!2sfr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Formulaire de Contact -->
+    <section class="contact-form-section section-padding bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Formulaire de contact</h2>
+                <p>Dites-nous en plus sur votre projet</p>
+            </div>
+            
+            <div class="contact-form-container">
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group-container">
+                        <div class="form-group">
+                            <label for="name">Nom complet *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group-container">
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Entreprise / Organisation</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Sujet *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="" disabled selected>Choisir une option</option>
+                            <option value="devis">Demande de devis</option>
+                            <option value="info">Demande d'information</option>
+                            <option value="partnership">Proposition de partenariat</option>
+                            <option value="other">Autre</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="project_type">Type de projet</label>
+                        <select id="project_type" name="project_type">
+                            <option value="" disabled selected>Choisir une option</option>
+                            <option value="mobile">Application mobile</option>
+                            <option value="web">Site web</option>
+                            <option value="software">Logiciel métier</option>
+                            <option value="consulting">Conseil & assistance</option>
+                            <option value="other">Autre</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Votre message *</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="budget">Budget estimé</label>
+                        <select id="budget" name="budget">
+                            <option value="" disabled selected>Choisir une option</option>
+                            <option value="less_than_1500">Moins de 1 500€</option>
+                            <option value="1500_3000">Entre 1 500€ et 3 000€</option>
+                            <option value="3000_8000">Entre 3 000€ et 8 000€</option>
+                            <option value="more_than_8000">Plus de 8 000€</option>
+                            <option value="unknown">Je ne sais pas encore</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                        <label for="privacy">J'accepte que mes données soient traitées conformément à la <a href="privacy.html">politique de confidentialité</a> *</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block">Envoyer le message</button>
+                    </div>
+                    
+                    <p class="form-note">* Champs obligatoires</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section FAQ -->
+    <section class="contact-faq section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Questions fréquentes</h2>
+                <p>Avant de nous contacter, vous trouverez peut-être la réponse à votre question ici</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Comment se déroule le premier rendez-vous ?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Le premier rendez-vous est gratuit et sans engagement. Il peut se tenir en présentiel à Lyon ou en visioconférence selon votre préférence. Nous discutons de votre projet, de vos objectifs et commençons à explorer les solutions possibles. Cette première rencontre dure généralement entre 45 minutes et 1 heure.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quel est le délai pour obtenir un devis ?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Suite à notre première rencontre, nous vous envoyons un devis détaillé dans un délai de 2 à 5 jours ouvrés, en fonction de la complexité de votre projet. Pour les projets très complexes, nous pouvons proposer une phase d'étude préalable (payante) pour affiner le périmètre et vous fournir une estimation plus précise.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quelles informations fournir pour un premier contact efficace ?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Pour un premier échange productif, essayez de nous préciser : le type de projet (application mobile, site web, logiciel), ses objectifs principaux, vos contraintes (délais, budget), les fonctionnalités essentielles souhaitées, et toute référence qui pourrait nous aider à comprendre votre vision. Ne vous inquiétez pas si vous n'avez pas toutes ces informations, nous vous aiderons à les clarifier.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Travaillez-vous uniquement sur Lyon ?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Bien que nous soyons basés à Lyon, nous travaillons avec des clients dans toute la France et même à l'international. Grâce aux outils de communication modernes (visioconférence, outils collaboratifs), nous pouvons gérer efficacement des projets à distance. Pour les clients locaux, nous privilégions toutefois les rencontres en personne pour les étapes clés du projet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <img src="img/logo-white.svg" alt="Logo L'Atelier Numérique">
+                    </div>
+                    <p>Des solutions digitales sur mesure, accessibles et innovantes pour les entrepreneurs et petites structures.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Réalisations</a></li>
+                        <li><a href="process.html">Processus</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h4>Nos services</h4>
+                    <ul>
+                        <li><a href="services.html#mobile">Applications mobiles</a></li>
+                        <li><a href="services.html#web">Sites web</a></li>
+                        <li><a href="services.html#software">Logiciels métier</a></li>
+                        <li><a href="services.html#consulting">Conseil & assistance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> contact@lateliernumerique.fr</li>
+                        <li><i class="fas fa-phone"></i> 06 XX XX XX XX</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Lyon, France</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 L'Atelier Numérique. Tous droits réservés.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Politique de confidentialité</a>
+                    <a href="terms.html">Conditions d'utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
